@@ -50,7 +50,7 @@ public class App {
         try {
             CellRangerDatabaseApi.createSummaryRow(fileName, fieldMapperList);
         } catch(IOException e) {
-            System.out.println("CellRangerDatabaseApi.createSummaryRow");
+            System.out.println("ERROR: CellRangerDatabaseApi.createSummaryRow");
         }
 
     }
