@@ -30,7 +30,7 @@ public class MarkdownGenerator {
     }
     private static String generateMarkDownTable(String daoName, FieldMapperModel fieldMapperModel){
         List<FieldMapper> fieldMapperList = fieldMapperModel.getFieldMapperList();
-        String markdownTable = String.format(   "#%s\n" +
+        String markdownTable = String.format(   "# %s\n\n" +
                 "| Html Element | Html Label | Table Field | Table Type |\n" +
                 "| ------------ | ---------- | ----------- | ---------- |\n", daoName);
         for(FieldMapper fm : fieldMapperList){
