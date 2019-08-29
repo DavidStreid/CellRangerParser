@@ -3,7 +3,7 @@ package com.cellranger.util.dao;
 import javax.persistence.*;
 
 @Entity
-public class CellRangerWebSummary {
+public class CellRangerSummaryCountDao {
     @Id
     @Column(length = 150)
     public String F1;
