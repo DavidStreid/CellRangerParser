@@ -22,7 +22,7 @@
 | td | Chemistry | Chemistry | class java.lang.String |
 | td | Cell Ranger Version | CellRangerVersion | class java.lang.String |
 
-#CellRangerSummaryCountDao
+# CellRangerSummaryCountDao 
 | Html Element | Html Label | Table Field | Table Type |
 | ------------ | ---------- | ----------- | ---------- |
 | h1 | Estimated Number of Cells | EstimatedNumberOfCells | class java.lang.Long |
