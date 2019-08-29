@@ -21,7 +21,7 @@ import java.io.IOException;
 
 public class CodeGenerator {
     private static Map<String, FieldMapperModel> daoFileMap = new HashMap<String, FieldMapperModel>();
-    private static String SCHEMA_FILE = "/PATH/TO/cell-ranger-util/src/main/java/com/cellranger/util/dao/Schema.md";
+    private static String SCHEMA_FILE = "/PATH/TO/cell-ranger-util/src/main/java/com/cellranger/util/dao/README.md";
 
     static {
         daoFileMap.put("CellRangerSummaryCountDao", new CellRangerSummaryCountModel());
