@@ -7,7 +7,8 @@ import java.util.Arrays;
 import com.cellranger.util.model.FieldMapper;
 
 /**
- * SORUCE OF TRUTH - THIS CREATES THE DAO & DOCUMENTATION.
+ * SOURCE OF TRUTH - THIS CREATES THE DAO & DOCUMENTATION.
+ * If there are changes to the schema or CellRanger output, MODIFY THIS
  */
 public class CellRangerSummaryCountModel {
     private static List<FieldMapper> fieldMapperList;
