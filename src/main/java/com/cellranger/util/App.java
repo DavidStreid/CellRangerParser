@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.io.IOException;
 
 import com.cellranger.util.model.FieldMapper;
+import com.cellranger.util.model.CellRangerSummaryCountModel;
 import com.cellranger.util.controller.CellRangerDatabaseApi;
 
 import com.cellranger.util.model.CellRangerSummaryCountModel;
@@ -16,7 +17,7 @@ public class App {
         String fileName = "/Users/streidd/code/playground/cell-ranger-util/src/main/java/com/cellranger/util/web_summary_count.html";
 
         try {
-            CellRangerDatabaseApi.createSummaryRow(fileName, CellRangerSummaryCountModel.getFieldMapperList());
+            CellRangerDatabaseApi.createSummaryRow(fileName, new CellRangerSummaryCountModel());
         } catch(IOException e) {
             System.out.println("ERROR: CellRangerDatabaseApi.createSummaryRow");
             System.out.println(e);

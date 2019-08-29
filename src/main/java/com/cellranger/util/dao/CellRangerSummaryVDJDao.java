@@ -46,46 +46,36 @@ import javax.persistence.Entity;
  * ******************************** DO NOT EDIT *********************************
  * ****************************************************************************** */
 @Entity
-public class CellRangerSummaryCountDao {
+public class CellRangerSummaryVDJDao {
     public Long EstimatedNumberOfCells;
 
     public Long MeanReadsPerCell;
 
-    public Long MedianGenesPerCell;
+    public Long NumCellsWithVDJSpanningPair;
 
-    public Long NumberOfReads;
+    public Float ReadsMappedToAnyVDJGene;
+
+    public Float ReadsMappedToTRA;
+
+    public Float ReadsMappedToTRB;
+
+    public Float MedianTRAUMIsPerCell;
+
+    public Float MedianTRBUMIsPerCell;
+
+    public Long NumberOfReadPairs;
 
     public Float ValidBarcodes;
 
-    public Float SequencingSaturation;
-
     public Float Q30BasesInBarcode;
 
-    public Float Q30BasesinRNARead;
+    public Float Q30BasesInRNARead1;
+
+    public Float Q30BasesInRNARead2;
 
     public Float Q30BasesInSampleIndex;
 
     public Float Q30BasesInUMI;
-
-    public Float ReadsMappedToGenome;
-
-    public Float ReadsMappedConfidentlyToGenome;
-
-    public Float ReadsMappedToIntergenicRegions;
-
-    public Float ReadsMappedToIntronicRegions;
-
-    public Float ReadsMappedToExonicRegions;
-
-    public Float ReadsMappedToTranscriptome;
-
-    public Float ReadsMappedToGene;
-
-    public Float FractionReadsInCells;
-
-    public Long TotalGenesDetected;
-
-    public Long MedianUMICountsPerCell;
 
     @Column(
             length = 64
@@ -95,7 +85,7 @@ public class CellRangerSummaryCountDao {
     @Column(
             length = 64
     )
-    public String Transcriptome;
+    public String VDJReference;
 
     @Column(
             length = 64

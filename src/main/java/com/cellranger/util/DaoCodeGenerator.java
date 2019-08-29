@@ -31,10 +31,46 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 
 import com.cellranger.util.model.FieldMapper;
+import com.cellranger.util.model.FieldMapperModel;
 import com.cellranger.util.model.CellRangerSummaryCountModel;
 
 public class DaoCodeGenerator {
     private static String WARNING =
+                    "─────────────────▄████▄\n" +
+                    "─────▄▄▄▄▄▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▄▄▄▄▄▄▄\n" +
+                    "───▄▀░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▀▄\n" +
+                    "──▐░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▌\n" +
+                    "──▐░░██████░░███████░░█████░░░██████░░▌\n" +
+                    "──▐░░██░░░░░░░░██░░░░██░░░██░░██░░░██░▌\n" +
+                    "──▐░░██████░░░░██░░░░██░░░██░░██████░░▌\n" +
+                    "──▐░░░░░░██░░░░██░░░░██░░░██░░██░░░░░░▌\n" +
+                    "──▐░░██████░░░░██░░░░░████░░░░██░░░░░░▌\n" +
+                    "──▐░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▌\n" +
+                    "───▀▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄▀\n" +
+                    "─────▀▀▀▀▀▀▀▀▀▀▀▀██████▀▀▀▀▀▀▀▀▀▀▀▀▀\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "──────────────────█▀▀█\n" +
+                    "─────────────────█▀▀▀▀█\n" +
+                    "─────────────────█▀▀▀▀█\n" +
+                    "─────────────────█▀▀▀▀█\n" +
+                    "─────────────────█▀▀▀▀█\n" +
+                    "─────────────────▀████▀ \n" +
+                    "\n" +
     "******************************************************************************\n" +
     "******************************** DO NOT EDIT *********************************\n" +
     "******************************************************************************";
@@ -81,8 +117,8 @@ public class DaoCodeGenerator {
         return fieldBuilder.build();
     }
 
-    public static void generateDaoFile(String fileName, List<FieldMapper> fieldMapperList) throws IOException {
-        TypeSpec typeSpec = createTypeSpec(fileName, fieldMapperList);
+    public static void generateDaoFile(String fileName, FieldMapperModel fieldMapperModel) throws IOException {
+        TypeSpec typeSpec = createTypeSpec(fileName, fieldMapperModel.getFieldMapperList());
         writeToOutputFile(getPersonPackageName(), typeSpec);
     }
 

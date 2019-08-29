@@ -5,21 +5,24 @@ import java.util.Map;
 import java.util.HashMap;
 
 import com.cellranger.util.model.CellRangerSummaryCountModel;
+import com.cellranger.util.model.CellRangerSummaryVDJModel;
 import com.cellranger.util.model.FieldMapper;
+import com.cellranger.util.model.FieldMapperModel;
 
 import java.io.IOException;
 
 
 
 public class CodeGenerator {
-    private static Map<String, List<FieldMapper>> daoFileMap = new HashMap<String, List<FieldMapper>>();
+    private static Map<String, FieldMapperModel> daoFileMap = new HashMap<String, FieldMapperModel>();
 
     static {
-        daoFileMap.put("CellRangerSummaryCountDao", CellRangerSummaryCountModel.getFieldMapperList());
+        daoFileMap.put("CellRangerSummaryCountDao", new CellRangerSummaryCountModel());
+        daoFileMap.put("CellRangerSummaryVDJDao", new CellRangerSummaryVDJModel());
     }
 
     public static void main(String[] args){
-        for (Map.Entry<String,List<FieldMapper>> entry : daoFileMap.entrySet()) {
+        for (Map.Entry<String,FieldMapperModel> entry : daoFileMap.entrySet()) {
             // TODO - Generate the markdown for each DAO file
             try {
                 DaoCodeGenerator.generateDaoFile(entry.getKey(), entry.getValue());

@@ -10,9 +10,8 @@ import com.cellranger.util.model.FieldMapper;
  * SOURCE OF TRUTH - THIS CREATES THE DAO & DOCUMENTATION.
  * If there are changes to the schema or CellRanger output, MODIFY THIS
  */
-public class CellRangerSummaryCountModel {
-    private static List<FieldMapper> fieldMapperList;
-    static {
+public class CellRangerSummaryCountModel extends FieldMapperModel {
+    public CellRangerSummaryCountModel() {
         fieldMapperList = new ArrayList<FieldMapper>(Arrays.asList(
                 new FieldMapper("h1", "Estimated Number of Cells", "EstimatedNumberOfCells", Long.class),
                 new FieldMapper("h2", "Mean Reads per Cell", "MeanReadsPerCell", Long.class),
@@ -40,9 +39,5 @@ public class CellRangerSummaryCountModel {
                 new FieldMapper("td", "Chemistry", "Chemistry", String.class),
                 new FieldMapper("td", "Cell Ranger Version", "CellRangerVersion", String.class)
         ));
-    }
-
-    public static List<FieldMapper> getFieldMapperList() {
-        return fieldMapperList;
     }
 }

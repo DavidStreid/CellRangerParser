@@ -9,15 +9,17 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.cellranger.util.model.FieldMapper;
+import com.cellranger.util.model.FieldMapperModel;
 
 public class CellRangerDatabaseApi {
-    public static void createSummaryRow(String fileName, List<FieldMapper> fieldMapperList) throws IOException {
+    public static void createSummaryRow(String fileName, FieldMapperModel fieldMapperModel) throws IOException {
         // Requires full path
         File input = new File(fileName);
         Document doc = Jsoup.parse(input, "UTF-8", ""); // TODO - throws warning
 
         Element value;
         String identifier;
+        List<FieldMapper> fieldMapperList = fieldMapperModel.getFieldMapperList();
         for(FieldMapper fm : fieldMapperList){
             identifier = String.format("%s:contains(%s)",fm.getHtmlElement(),fm.getHtmlField());
             Elements matches = doc.select(identifier);
