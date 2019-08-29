@@ -1,4 +1,4 @@
-package com.cellranger.util.controller;
+package com.cellranger.util.model;
 
 public class FieldMapper {
     private String htmlElement;

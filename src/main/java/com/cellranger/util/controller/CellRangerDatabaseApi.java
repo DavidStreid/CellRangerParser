@@ -8,6 +8,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.cellranger.util.model.FieldMapper;
+
 public class CellRangerDatabaseApi {
     public static void createSummaryRow(String fileName, List<FieldMapper> fieldMapperList) throws IOException {
         // Requires full path

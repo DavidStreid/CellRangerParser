@@ -1,4 +1,4 @@
-package com.cellranger.util.model;
+package com.cellranger.util.dao;
 
 import javax.persistence.*;
 
