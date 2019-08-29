@@ -25,5 +25,10 @@
       <version>1.0.2</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.squareup</groupId>
+      <artifactId>javapoet</artifactId>
+      <version>1.10.0</version>
+    </dependency>
   </dependencies>
 </project>
