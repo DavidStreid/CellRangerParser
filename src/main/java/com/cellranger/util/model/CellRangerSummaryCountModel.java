@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import com.cellranger.util.model.FieldMapper;
 
-public class CountWebSummary {
+public class CellRangerSummaryCountModel {
     private static List<FieldMapper> fieldMapperList;
     static {
         fieldMapperList = new ArrayList<FieldMapper>(Arrays.asList(
