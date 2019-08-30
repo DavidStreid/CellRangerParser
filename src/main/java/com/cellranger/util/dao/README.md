@@ -1,28 +1,5 @@
-# CellRangerSummaryVDJDao
+# CellRangerSummaryCount
 
-| Html Element | Html Label | Table Field | Table Type |
-| ------------ | ---------- | ----------- | ---------- |
-| h1 | Estimated Number of Cells | EstimatedNumberOfCells | class java.lang.Long |
-| h2 | Mean Reads per Cell | MeanReadsPerCell | class java.lang.Long |
-| h2 | Number of Cells With Productive V-J Spanning Pair | NumCellsWithVDJSpanningPair | class java.lang.Long |
-| td | Reads Mapped to Any V(D)J Gene | ReadsMappedToAnyVDJGene | class java.lang.Float |
-| td | Reads Mapped to TRA | ReadsMappedToTRA | class java.lang.Float |
-| td | Reads Mapped to TRB | ReadsMappedToTRB | class java.lang.Float |
-| td | Median TRA UMIs per Cell | MedianTRAUMIsPerCell | class java.lang.Float |
-| td | Median TRB UMIs per Cell | MedianTRBUMIsPerCell | class java.lang.Float |
-| td | Number of Read Pairs | NumberOfReadPairs | class java.lang.Long |
-| td | Valid Barcodes | ValidBarcodes | class java.lang.Float |
-| td | Q30 Bases in Barcode | Q30BasesInBarcode | class java.lang.Float |
-| td | Q30 Bases in RNA Read 1 | Q30BasesInRNARead1 | class java.lang.Float |
-| td | Q30 Bases in RNA Read 2 | Q30BasesInRNARead2 | class java.lang.Float |
-| td | Q30 Bases in Sample Index | Q30BasesInSampleIndex | class java.lang.Float |
-| td | Q30 Bases in UMI | Q30BasesInUMI | class java.lang.Float |
-| td | Name | Name | class java.lang.String |
-| td | V(D)J Reference | VDJReference | class java.lang.String |
-| td | Chemistry | Chemistry | class java.lang.String |
-| td | Cell Ranger Version | CellRangerVersion | class java.lang.String |
-
-# CellRangerSummaryCountDao 
 | Html Element | Html Label | Table Field | Table Type |
 | ------------ | ---------- | ----------- | ---------- |
 | h1 | Estimated Number of Cells | EstimatedNumberOfCells | class java.lang.Long |
@@ -47,5 +24,28 @@
 | td | Median UMI Counts per Cell | MedianUMICountsPerCell | class java.lang.Long |
 | td | Name | Name | class java.lang.String |
 | td | Transcriptome | Transcriptome | class java.lang.String |
+| td | Chemistry | Chemistry | class java.lang.String |
+| td | Cell Ranger Version | CellRangerVersion | class java.lang.String |
+# CellRangerSummaryVdj
+
+| Html Element | Html Label | Table Field | Table Type |
+| ------------ | ---------- | ----------- | ---------- |
+| h1 | Estimated Number of Cells | EstimatedNumberOfCells | class java.lang.Long |
+| h2 | Mean Reads per Cell | MeanReadsPerCell | class java.lang.Long |
+| h2 | Number of Cells With Productive V-J Spanning Pair | NumCellsWithVDJSpanningPair | class java.lang.Long |
+| td | Reads Mapped to Any V(D)J Gene | ReadsMappedToAnyVDJGene | class java.lang.Float |
+| td | Reads Mapped to TRA | ReadsMappedToTRA | class java.lang.Float |
+| td | Reads Mapped to TRB | ReadsMappedToTRB | class java.lang.Float |
+| td | Median TRA UMIs per Cell | MedianTRAUMIsPerCell | class java.lang.Float |
+| td | Median TRB UMIs per Cell | MedianTRBUMIsPerCell | class java.lang.Float |
+| td | Number of Read Pairs | NumberOfReadPairs | class java.lang.Long |
+| td | Valid Barcodes | ValidBarcodes | class java.lang.Float |
+| td | Q30 Bases in Barcode | Q30BasesInBarcode | class java.lang.Float |
+| td | Q30 Bases in RNA Read 1 | Q30BasesInRNARead1 | class java.lang.Float |
+| td | Q30 Bases in RNA Read 2 | Q30BasesInRNARead2 | class java.lang.Float |
+| td | Q30 Bases in Sample Index | Q30BasesInSampleIndex | class java.lang.Float |
+| td | Q30 Bases in UMI | Q30BasesInUMI | class java.lang.Float |
+| td | Name | Name | class java.lang.String |
+| td | V(D)J Reference | VDJReference | class java.lang.String |
 | td | Chemistry | Chemistry | class java.lang.String |
 | td | Cell Ranger Version | CellRangerVersion | class java.lang.String |

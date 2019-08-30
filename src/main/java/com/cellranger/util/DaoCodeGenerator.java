@@ -30,6 +30,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Column;
 
+import lombok.AllArgsConstructor;
+
 import com.cellranger.util.model.FieldMapper;
 import com.cellranger.util.model.FieldMapperModel;
 import com.cellranger.util.model.CellRangerSummaryCountModel;
@@ -92,6 +94,7 @@ public class DaoCodeGenerator {
                 .classBuilder(fileName)
                 .addJavadoc(WARNING)
                 .addAnnotation(Entity.class)
+                .addAnnotation(AnnotationSpec.builder(AllArgsConstructor.class).build())
                 .addModifiers(Modifier.PUBLIC);
 
         for(FieldMapper fm : fieldMappers)

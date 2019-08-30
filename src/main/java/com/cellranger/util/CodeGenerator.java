@@ -24,8 +24,9 @@ public class CodeGenerator {
     private static String SCHEMA_FILE = "/PATH/TO/cell-ranger-util/src/main/java/com/cellranger/util/dao/README.md";
 
     static {
-        daoFileMap.put("CellRangerSummaryCountDao", new CellRangerSummaryCountModel());
-        daoFileMap.put("CellRangerSummaryVDJDao", new CellRangerSummaryVDJModel());
+        /* The key is the name of the table, i.e. "CellRangerSummary" -> "cellrangersummary" table */
+        daoFileMap.put("CellRangerSummaryCount", new CellRangerSummaryCountModel());
+        daoFileMap.put("CellRangerSummaryVdj", new CellRangerSummaryVDJModel());
     }
 
     public static void main(String[] args){
