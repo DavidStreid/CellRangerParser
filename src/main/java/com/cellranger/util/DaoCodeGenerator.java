@@ -94,7 +94,7 @@ public class DaoCodeGenerator {
                 .classBuilder(fileName)
                 .addJavadoc(WARNING)
                 .addAnnotation(Entity.class)
-                .addAnnotation(AnnotationSpec.builder(AllArgsConstructor.class).build())
+                .addAnnotation(AllArgsConstructor.class)
                 .addModifiers(Modifier.PUBLIC);
 
         for(FieldMapper fm : fieldMappers)
